@@ -67,23 +67,46 @@ dl    { display: block; }
 .brand-buzz   { color: var(--red); }
 .brand-winkle { color: var(--cream); }
 
-.nav-links { display: flex; align-items: center; gap: 28px; }
-.nav-links li a {
-  color: rgba(255,255,255,0.82); font-size: 0.82rem; font-weight: 500;
-  letter-spacing: 0.5px; text-transform: uppercase; transition: color 0.2s;
+.nav-links {
+  display: none;
+  position: absolute; top: 100%; left: 0; right: 0;
+  background: var(--navy);
+  flex-direction: column; align-items: center;
+  padding: 24px 0 32px;
+  gap: 6px;
+  border-top: 2px solid var(--red);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
 }
-.nav-links li a:hover { color: var(--red); }
+.nav-links.open { display: flex; }
+.nav-links li { width: 100%; text-align: center; }
+.nav-links li a {
+  display: block; padding: 12px 24px;
+  color: rgba(255,255,255,0.82); font-size: 0.88rem; font-weight: 500;
+  letter-spacing: 1px; text-transform: uppercase; transition: color 0.2s, background 0.2s;
+}
+.nav-links li a:hover { color: var(--red); background: rgba(255,255,255,0.04); }
 .nav-cta {
+  display: inline-block !important; margin-top: 8px;
   background: var(--red) !important; color: white !important;
-  padding: 8px 20px; border-radius: 4px; font-weight: 600 !important;
+  padding: 10px 32px !important; border-radius: 4px; font-weight: 600 !important;
 }
 .nav-cta:hover { background: var(--red-dark) !important; }
 
 .nav-toggle {
-  display: none; flex-direction: column; gap: 5px;
-  background: none; border: none; cursor: pointer; padding: 4px;
+  display: flex; flex-direction: column; justify-content: center; gap: 6px;
+  background: none; border: none; cursor: pointer; padding: 8px;
+  width: 44px; height: 44px; border-radius: 4px;
+  transition: background 0.2s;
 }
-.nav-toggle span { display: block; width: 24px; height: 2px; background: var(--cream); }
+.nav-toggle:hover { background: rgba(255,255,255,0.08); }
+.nav-toggle span {
+  display: block; width: 26px; height: 2px; background: var(--cream);
+  border-radius: 2px; transition: transform 0.3s, opacity 0.3s;
+  transform-origin: center;
+}
+.nav-toggle.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+.nav-toggle.active span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.nav-toggle.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 
 /* ============================================================
    HERO
@@ -426,14 +449,7 @@ dl    { display: block; }
 @media (max-width: 768px) {
   :root { --section-pad: 70px 0; }
 
-  .nav-toggle { display: flex; }
   .navbar { background: var(--navy); }
-  .nav-links {
-    display: none; position: absolute; top: 100%; left: 0; right: 0;
-    background: var(--navy); flex-direction: column; padding: 24px; gap: 20px;
-    border-top: 1px solid rgba(255,255,255,0.1);
-  }
-  .nav-links.open { display: flex; }
 
   .partnership-grid    { grid-template-columns: 1fr; }
   .partner-divider     { display: none; }
