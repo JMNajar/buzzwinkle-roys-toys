@@ -391,6 +391,8 @@ dl    { display: block; }
 }
 .design-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.35s; }
 .design-card:hover img { transform: scale(1.05); }
+.design-card--full { background: var(--white); padding: 12px; }
+.design-card--full img { object-fit: contain; }
 
 /* ============================================================
    GLOSSARY
