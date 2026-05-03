@@ -440,6 +440,22 @@ dl    { display: block; }
 /* ============================================================
    BRAND STORY
    ============================================================ */
+.mission-block {
+  border-left: 4px solid var(--red);
+  background: rgba(204,41,41,0.1);
+  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+  padding: 28px 36px;
+  margin-bottom: 56px;
+}
+.mission-label {
+  font-size: 0.7rem; font-weight: 700; letter-spacing: 3px;
+  text-transform: uppercase; color: var(--red); margin-bottom: 12px;
+}
+.mission-statement {
+  font-family: var(--font-display); font-size: 1.35rem; font-weight: 500;
+  color: var(--cream); line-height: 1.5; letter-spacing: 0.3px;
+}
+
 .brand-grid {
   display: grid; grid-template-columns: 1fr 380px;
   gap: 64px; align-items: start;
