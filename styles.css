@@ -438,6 +438,63 @@ dl    { display: block; }
 .footer-copy p { font-size: 0.78rem; color: rgba(251,247,240,0.38); text-align: right; line-height: 1.7; }
 
 /* ============================================================
+   BRAND STORY
+   ============================================================ */
+.brand-grid {
+  display: grid; grid-template-columns: 1fr 380px;
+  gap: 64px; align-items: start;
+}
+.brand-story p {
+  font-size: 1rem; color: rgba(251,247,240,0.72);
+  line-height: 1.85; margin-bottom: 20px;
+}
+.brand-story p:last-child { margin-bottom: 0; }
+.brand-divider {
+  width: 60px; height: 3px; background: var(--red);
+  margin: 32px 0; border-radius: 2px;
+}
+.brand-bridge {
+  font-family: var(--font-display); font-size: 1.2rem !important;
+  font-weight: 600; text-transform: uppercase; letter-spacing: 1px;
+  color: var(--cream) !important;
+}
+.brand-closer {
+  font-family: var(--font-display); font-size: 1.1rem !important;
+  font-weight: 600; text-transform: uppercase; letter-spacing: 1px;
+  color: var(--red) !important; margin-top: 8px !important;
+}
+
+.brand-callout-col { display: flex; flex-direction: column; gap: 32px; }
+
+.brand-stats {
+  background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--radius-lg); padding: 32px; display: flex; flex-direction: column; gap: 28px;
+}
+.brand-stat { text-align: center; }
+.brand-stat-number {
+  font-family: var(--font-display); font-size: 2.8rem; font-weight: 700;
+  color: var(--red); line-height: 1; margin-bottom: 8px;
+}
+.brand-stat-label {
+  font-size: 0.8rem; color: rgba(251,247,240,0.55);
+  text-transform: uppercase; letter-spacing: 1px; line-height: 1.4;
+}
+
+.brand-quote {
+  background: var(--red); border-radius: var(--radius-lg);
+  padding: 36px 32px; text-align: center;
+}
+.brand-quote blockquote {
+  font-family: var(--font-display); font-size: 1.8rem; font-weight: 700;
+  color: white; line-height: 1.2; text-transform: uppercase;
+  letter-spacing: 1px; margin-bottom: 16px;
+}
+.brand-quote cite {
+  font-size: 0.78rem; color: rgba(255,255,255,0.65);
+  letter-spacing: 1px; font-style: normal; text-transform: uppercase;
+}
+
+/* ============================================================
    HERO LOGO
    ============================================================ */
 .hero-logo { margin-bottom: 28px; }
@@ -547,6 +604,7 @@ dl    { display: block; }
 
   .navbar { background: var(--navy); }
 
+  .brand-grid          { grid-template-columns: 1fr; gap: 40px; }
   .partnership-grid    { grid-template-columns: 1fr; }
   .partner-divider     { display: none; }
   .budget-layout       { grid-template-columns: 1fr; }
