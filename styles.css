@@ -513,11 +513,13 @@ dl    { display: block; }
 /* ============================================================
    HERO LOGO
    ============================================================ */
-.hero-logo { margin-bottom: 20px; }
+.hero-logo { margin-bottom: 28px; }
 .hero-logo img {
-  max-width: 420px; margin: 0 auto;
-  mix-blend-mode: screen;
-  filter: drop-shadow(0 4px 24px rgba(204,41,41,0.3));
+  max-width: 340px; margin: 0 auto;
+  background: white;
+  padding: 16px 28px;
+  border-radius: 14px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.4);
 }
 
 /* ============================================================
