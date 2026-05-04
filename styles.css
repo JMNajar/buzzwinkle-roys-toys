@@ -537,6 +537,11 @@ dl    { display: block; }
    ============================================================ */
 .budget-layout { display: grid; grid-template-columns: 1fr 340px; gap: 32px; align-items: start; }
 
+.one-time-table-wrap {
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--radius-lg); overflow: hidden; margin-top: 16px;
+}
+
 .budget-table-wrap {
   background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12);
   border-radius: var(--radius-lg); overflow: hidden;
